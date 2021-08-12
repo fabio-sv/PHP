@@ -14,11 +14,11 @@
 
 <p>Os exemplos a seguir adicionam um novo registro à tabela "convidados":</p>
 <p>
-    <h3><b>exemplo</b></h3>
+    <a href=" ">
+        <h3><b>exemplo</b></h3>
+    </a>
 </p>
 
-<a href="https://github.com/fabio-sv/PHP/blob/main/php/30.mysql/03.insert/ex01.php">
-<div>
 ```php
 //MySqli orientado a objetos
 <?php
@@ -47,6 +47,5 @@ if ($conexao->query($sql) === TRUE) {
 $conexao->close();
 ?>
 ```php
-</div>
-</a>
+
 
