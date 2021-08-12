@@ -17,6 +17,7 @@
     <h3><b>exemplo</b></h3>
 </p>
 
+<a href="https://github.com/fabio-sv/PHP/blob/main/php/30.mysql/03.insert/ex01.php">
 ```php
 //MySqli orientado a objetos
 <?php
@@ -45,3 +46,4 @@ if ($conexao->query($sql) === TRUE) {
 $conexao->close();
 ?>
 ```
+</a>
