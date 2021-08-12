@@ -14,7 +14,7 @@
 
 <p>Os exemplos a seguir adicionam um novo registro à tabela "convidados":</p>
 <p>
-    <b>exemplo</b>
+    <h3><b>exemplo</b></h3>
 </p>
 
 ```php
