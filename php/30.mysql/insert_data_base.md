@@ -13,29 +13,33 @@
 ```
 
 <p>Os exemplos a seguir adicionam um novo registro à tabela "convidados":</p>
+<p>
+    <b>exemplo</b>
+</p>
 
 ```php
+//MySqli orientado a objetos
 <?php
-$serve = 'localhost'; 
+$serve = 'localhost';
 $user = 'root';
-$password  = '';
+$passaword = '';
+$dbname = 'meuDB';
 
-//Cria o banco de dados
-$conexao = new mysqli($serve, $user, $password);
-
-//Check a conexão
-if ($conexao->connect_error) {
-    die ("Conexão falhou: " . $con->connection_error);
-} else {
-    echo("Conexão bem sucedida\n");
+//Cria a conexão com o banco
+$conexao = new mysqli($serve, $user, $passaword, $dbname);
+// Valida a conexão
+if ($conexao->connect_error){
+    die("Erro na conexão: " . $conexao->connect_error());
 }
-    
-//Criando a base de dados
-$sql = "CREATE DATABASE meuDB";
-if($conexao->query($sql) === TRUE) {
-    echo("Base de dados criada com sucesso");
-} else {
-    echo("Erro na criação da base de dados: " . $conexao->error);
+// Insere dados na 
+$sql = "INSERT INTO convidados(firstname, lastname, email)
+VALUES ('John', 'Doe', 'john@exmemple.com')";
+
+
+if ($conexao->query($sql) === TRUE) {
+    echo "Novos dados inseridos";
+}else {
+    echo "Erro: " . $sql . "<br>" . $conexao->error;
 }
 
 $conexao->close();
