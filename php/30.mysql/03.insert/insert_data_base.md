@@ -77,10 +77,10 @@ mysqli_close($conexao);
 
 ```php
 <?php
-$serve = "localhost";
-$user = "root";
-$password = "";
-$dbname = "meuDB";
+$serve = 'localhost';
+$user = 'root';
+$password = '';
+$dbname = 'meuDB';
 
 try {
   $conn = new PDO("mysql:host=$serve;dbname=$dbname", $user, $password);
