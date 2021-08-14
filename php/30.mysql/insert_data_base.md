@@ -13,11 +13,6 @@
 ```
 
 <p>Os exemplos a seguir adicionam um novo registro à tabela "convidados":</p>
-<p>
-    <a href="https://www.w3schools.com/php/php_mysql_insert.asp">
-        <h3><b>exemplo</b></h3>
-    </a>
-</p>
 
 <h3>Exemplo (orientado a objetos)</h3>
 
@@ -52,7 +47,6 @@ $conexao->close();
 <h3>Exemplo (procedural)</h3>
 
 ```php
-//MySqli procedural
 <?php
 $serve = 'localhost';
 $user = 'root';
