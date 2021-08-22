@@ -16,11 +16,7 @@ As variáveis superglobais do PHP são:
 - $ _COOKIE
 - $ _SESSION
 
-# PHP Superglobal - $ GLOBALS
 
-Variáveis superglobais são variáveis integradas que estão sempre disponíveis em todos os escopos.
-
-------
 
 ## PHP $ GLOBALS
 
