@@ -1,40 +1,9 @@
-<a hret="#t1">Sistaxe</a>
 
-<a href="https://github.com/fabio-sv/PHP/blob/main/learning_php/13.super_globais/super_globais%20.md">Superglobais </a>
 
-# Tutorial d e PHP
+# Sumário
 
-## <h2 id=t1>Sistaxe PHP</h2>
+## Tutorial de PHP
 
-Um script PHP pode ser colocado em qualquer lugar do documento.
+### <a href="https://github.com/fabio-sv/PHP/blob/main/learning_php/13.super_globais/super_globais%20.md">Superglobais </a>
 
-Um script PHP começa `<?php`e termina com `?>`:
-
-```php
-<?php
-// PHP o código vai aqui
-?>
-```
-
-A extensão de arquivo padrão para arquivos PHP é " `.php`".
-
-Um arquivo PHP normalmente contém tags HTML e algum código de script PHP.
-
-Abaixo, temos um exemplo de um arquivo PHP simples, com um script PHP que usa uma função PHP embutida " `echo`" para gerar o texto "Hello World!" em uma página da web:
-
-```php
-<!DOCTYPE html>
-<html>
-<body>
-
-<h1>Minha página PHP</h1>
-
-<?php
-echo "Hello World!";
-?>
-
-</body>
-</html>
-```
-
-# Variáveis PHP
+## Formulários PHP
