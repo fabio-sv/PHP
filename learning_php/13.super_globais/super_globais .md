@@ -41,7 +41,7 @@ echo $z;
 ?>
 ```
 
-# PHP Superglobal - $ _SERVER
+
 
 ## PHP $ _SERVER
 
