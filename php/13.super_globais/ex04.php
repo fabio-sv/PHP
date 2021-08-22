@@ -8,7 +8,7 @@
 
 <?php
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-
+    // coleta o nome do usuário
     $nome = $_POST['nome'];
     if(empty($nome)) {
         echo "Nome está vazio.";

@@ -132,3 +132,63 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 PHP $ _POST é uma variável superglobal do PHP que é usada para coletar dados de formulário após o envio de um formulário HTML com method = "post". $ _POST também é amplamente usado para passar variáveis.
 
 O exemplo abaixo mostra um formulário com um campo de entrada e um botão de envio. Quando um usuário envia os dados clicando em "Enviar", os dados do formulário são enviados para o arquivo especificado no atributo ``action`` da tag ``<form>``. Neste exemplo, apontamos para o próprio arquivo para processar os dados do formulário. Se você deseja usar outro arquivo PHP para processar dados de formulário, substitua-o pelo nome de arquivo de sua escolha. Então, podemos usar a variável superglobal $ _POST para coletar o valor do campo de entrada:
+
+```php
+<html>
+<body>
+    <form method="post" action="<?php echo $_SERVER['PHP_SELF'];?>">
+        <span>Nome:</span>
+        <input type="text" name="nome">
+        <input type="submit">
+    </form>
+
+<?php
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    // coleta o nome do usuário
+    $nome = $_POST['nome'];
+    if(empty($nome)) {
+        echo "Nome está vazio.";
+    }
+    else {
+        echo $nome;
+    }
+}
+?>
+</body>
+</html>
+```
+
+## PHP $ _GET
+
+PHP $ _GET é uma variável superglobal do PHP que é usada para coletar dados de formulário após o envio de um formulário HTML com method = "get".
+
+$ _GET também pode coletar dados enviados na URL.
+
+Suponha que temos uma página HTML que contém um hiperlink com parâmetros:
+
+```html
+<html>
+<body>
+
+<a href="ex05b.php?subject=PHP&web=Google">Test $GET</a>
+
+</body>
+</html>
+```
+
+Quando um usuário clica no link "Test $ GET", os parâmetros "subject" e "web" são enviados para "test_get.php", e você pode acessar seus valores em "test_get.php" com $ _GET.
+
+O exemplo abaixo mostra o código em "test_get.php":
+
+```php
+<html>
+<body>
+<?php
+
+echo "Estude ". $_GET['subject'] . " no " . $_GET['web'];
+?>
+
+</body>
+</html>
+```
+
