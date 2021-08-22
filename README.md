@@ -2,7 +2,7 @@
 
 # Tutorial d e PHP
 
-## <h2>Sistaxe PHP</h2>
+## <h2 id=t1>Sistaxe PHP</h2>
 
 Um script PHP pode ser colocado em qualquer lugar do documento.
 
