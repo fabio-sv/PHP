@@ -1,0 +1,2 @@
+<?php
+$vetor[$i] = $item;

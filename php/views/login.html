@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUD</title>
+    <style>
+        .cabeçalho {
+            font-size: 150%;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            margin-top: 40px;
+            margin-bottom: 40px;
+        }
+        .container {
+            background-color: #EAE9EA;
+            display: flexbox;
+            border: 1px solid white;
+            border-radius: 15px;
+            padding: 5px;
+            margin-top: 6%;
+            margin-bottom: 20%;
+            margin-left: 36%;
+            margin-right: 36%;
+            text-align: center;
+        }
+        input {
+            font-family:Verdana, Geneva, Tahoma, sans-serif;
+            font-size: 90%;
+            border: 1px solid;
+            border-radius: 15px;
+            border-color: white;
+            margin-bottom: 20px;
+            padding-top: 8px;
+            padding-bottom: 8px;
+            padding-right: 50px;
+            padding-left: 8px;
+            outline: none;
+            -webkit-transition: 0.8s;
+            transition: 0.8s;
+        }
+        input:hover {
+            border: 3px solid #3091F8;
+        }
+        button {
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-size: 100%;
+            color: white;
+            background-color: #3091F8;
+            border: none;
+            border-radius: 15px;
+            padding: 10px 105px; 
+        }
+        button:hover {
+            background-color: blue;
+        }
+        .rodape {
+            margin-top: 8px;
+            margin-bottom: 40px;
+        }
+    </style>
+</head>
+<body>
+    <form method="GET">
+        <div class="container">
+            <h2 class="cabeçalho">Faça seu login</h2>
+            <input type="email" placeholder="E-mail" name="email"><br>
+            <input type="password" placeholder="Senha" name="senha"><br>
+            <button type="submit">Entrar</button>
+            <div class="rodape">
+                <a href="" style="text-decoration: none;" ><p>Ainda não possui uma conta?</p></a>
+            </div>
+        </div>
+    </form> 
+</body>
+</html>
