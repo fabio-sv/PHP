@@ -1,5 +1,7 @@
 <a hret="#t1">Sistaxe</a>
 
+<a href="https://github.com/fabio-sv/PHP/blob/main/learning_php/13.super_globais/super_globais%20.md">Superglobais </a>
+
 # Tutorial d e PHP
 
 ## <h2 id=t1>Sistaxe PHP</h2>
