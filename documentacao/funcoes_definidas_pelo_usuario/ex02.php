@@ -3,11 +3,13 @@
 
 $my_var = true;
 
-/* Nos nao podemos chamar $myFunc daqui
-   porque ela ainda não existe,
-   mas nos podemos chamar myFunc2() */
+/* 
+* Nos nao podemos chamar $myFunc daqui
+* porque ela ainda não existe,
+* mas nos podemos chamar myFunc2() 
+*/
 
-myFunc2(); // erro
+myFunc2(); 
 
 if($my_var) {
     function myFunc() {
@@ -15,8 +17,10 @@ if($my_var) {
     }
 }
 
-/* Agora nos podemos chamar myFunc()
-   porque $my_var foi avaliado como true */
+/* 
+* Agora nos podemos chamar myFunc()
+* porque $my_var foi avaliado como true 
+*/
 
 if($my_var) myFunc();
 
