@@ -1,18 +1,20 @@
 <?php
-/* Interface Carro */
+//Implementação da interface Carro:
 interface Carro {
-    public function equipar();
+    
+    public function montar();
+
 }
 
-/* Classe carro base */
+//Implementação da classe CarroBase:
 class CarroBase implements Carro {
-    /** @override */
-    public function equipar() {
-        echo "\nEssa é uma carro base.\n";
+    
+    public function montar() {
+        echo "\nEssa é um carro base.\n";
     }
 }
 
-/* Classe carro decorator */
+//Implementação da classe CarroDecorator:
 class CarroDecorator implements Carro {
     protected $carro; 
 
@@ -20,48 +22,51 @@ class CarroDecorator implements Carro {
         $this->carro = $carro;
     }
 
-    /** @override */
-    public function equipar() {
-        $this->carro->equipar();
+    public function montar() {
+        $this->carro->montar();
     }
 }
 
-/* Classe Som */
+//Implementação da classe Som:
 class Som extends CarroDecorator {
-
     public function __construct(Carro $carro) {
         parent::__construct($carro);
     }
 
     /** @override */
-    public function equipar() {
-        parent::equipar();
+    public function montar() {
+        parent::montar();
         echo "Adicionando som ao carro.\n";
     }
 }
 
-/* Classe Insulfilm */
-class Insulfilm extends CarroDecorator {
-   
-    public function equipar() {
-        parent::equipar();
-        echo "Adicionando silenciador a carro. \n";
+//Implementação da classe Silenciador:
+class Alarme extends CarroDecorator {
+    public function __construct(Carro $carro) {
+        parent::__construct($carro);
+    }
+
+    /** @override */
+    public function montar() {
+        parent::montar();
+        echo "Adicionando alarme ao carro.\n";
     }
 }
 
-/* Monta uma carro com som e com Insulfilm */
-$carroCompleto = new Insulfilm( new Som ( new CarroBase()));
-$carroCompleto->equipar();
+/* Monta um carro com alarme e com som. */
+$carroCompleto = new Alarme( new Som( new CarroBase() ) );
+$carroCompleto->montar();
 
-/* Monta um carro sem acessórios */
+/* Monta um carro sem acessórios. */
 $carroB = new CarroBase();
-$carro->montar();
+$carroB->montar();
 
-/* Monta um carro com Insulfilm. */
-$carroComInsufilm = new Insulfilm( $carroB );
-$carroComInsufilm->montar();
+/* Monta uma carro com alarme. */
+$carroComAlarme = new Alarme($carroB);
+$carroComAlarme->montar();
 
-/* Monta um carro com Som. */
-$carroComSom = new Som( $carro );
+/* Monta uma carro com som. */
+$carroComSom = new Som($carroB);
 $carroComSom->montar();
+
 ?>
