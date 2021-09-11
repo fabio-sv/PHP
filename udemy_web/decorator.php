@@ -1,16 +1,15 @@
 <?php
-//Implementação da interface Carro:
+// Implementação da interface Carro:
 interface Carro {
     
     public function montar();
-
 }
 
 //Implementação da classe CarroBase:
 class CarroBase implements Carro {
     
     public function montar() {
-        echo "\nEssa é um carro base.\n";
+        echo "\nEsse é um carro base.\n";
     }
 }
 
@@ -27,7 +26,7 @@ class CarroDecorator implements Carro {
     }
 }
 
-//Implementação da classe Som:
+// Implementação da classe Som:
 class Som extends CarroDecorator {
     public function __construct(Carro $carro) {
         parent::__construct($carro);
@@ -40,7 +39,7 @@ class Som extends CarroDecorator {
     }
 }
 
-//Implementação da classe Silenciador:
+// Implementação da classe Alarme:
 class Alarme extends CarroDecorator {
     public function __construct(Carro $carro) {
         parent::__construct($carro);
@@ -68,5 +67,4 @@ $carroComAlarme->montar();
 /* Monta uma carro com som. */
 $carroComSom = new Som($carroB);
 $carroComSom->montar();
-
 ?>
