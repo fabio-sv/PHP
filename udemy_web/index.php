@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="assets/css/estilo.css">
+    <link rel="stylesheet" href="resource/assets/css/estilo.css">
     <title>Curso PHP</title>
 </head>
 <body>
@@ -18,7 +18,7 @@
                 <div class="modulo verde">
                     <h3>Módulo 01</h3>
                     <ul>
-                        <li><a href="#">Exercícios A</a></li>
+                        <li><a href="exercicio.php?dir=03.secao&file=ex28">Olá PHP</a></li>
                         <li><a href="#">Exercícios B</a></li>
                         <li><a href="#">Exercícios C</a></li>
                     </ul>
@@ -39,7 +39,7 @@
                         <li><a href="#">Exercícios C</a></li>
                     </ul>
                 </div>
-                <div class="modulo">
+                <div class="modulo roxo">
                     <h3>Módulo 04</h3>
                     <ul>
                         <li><a href="#">Exercícios A</a></li>
@@ -47,7 +47,7 @@
                         <li><a href="#">Exercícios C</a></li>
                     </ul>
                 </div>
-                <div class="modulo">
+                <div class="modulo laranja">
                     <h3>Módulo 05</h3>
                     <ul>
                         <li><a href="#">Exercícios A</a></li>
@@ -55,7 +55,8 @@
                         <li><a href="#">Exercícios C</a></li>
                     </ul>
                 </div>
-                <div class="modulo">
+                
+                <div class="modulo verde-escuro">
                     <h3>Módulo 06</h3>
                     <ul>
                         <li><a href="#">Exercícios A</a></li>
@@ -63,7 +64,7 @@
                         <li><a href="#">Exercícios C</a></li>
                     </ul>
                 </div>
-                <div class="modulo">
+                <div class="modulo vermelho-escuro">
                     <h3>Módulo 07</h3>
                     <ul>
                         <li><a href="#">Exercícios A</a></li>
@@ -71,7 +72,7 @@
                         <li><a href="#">Exercícios C</a></li>
                     </ul>
                 </div>
-                <div class="modulo">
+                <div class="modulo azul-claro">
                     <h3>Módulo 08</h3>
                     <ul>
                         <li><a href="#">Exercícios A</a></li>
@@ -79,7 +80,7 @@
                         <li><a href="#">Exercícios C</a></li>
                     </ul>
                 </div>
-                <div class="modulo">
+                <div class="modulo roxo-escuro">
                     <h3>Módulo 09</h3>
                     <ul>
                         <li><a href="#">Exercícios A</a></li>
@@ -91,7 +92,7 @@
         </div>
     </main>
     <footer class="rodape">
-        FABIO SILVA © 2021
+        FABIO SILVA © <?= date('Y')?>
     </footer>
 </body>
 </html>

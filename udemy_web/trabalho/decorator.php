@@ -2,13 +2,13 @@
 // Implementação da interface Carro:
 interface Carro {
     
-    public function montar();
+    public function equipar();
 }
 
 //Implementação da classe CarroBase:
 class CarroBase implements Carro {
     
-    public function montar() {
+    public function equipar() {
         echo "\nEsse é um carro base.\n";
     }
 }
@@ -21,8 +21,8 @@ class CarroDecorator implements Carro {
         $this->carro = $carro;
     }
 
-    public function montar() {
-        $this->carro->montar();
+    public function equipar() {
+        $this->carro->equipar();
     }
 }
 
@@ -33,8 +33,8 @@ class Som extends CarroDecorator {
     }
 
     /** @override */
-    public function montar() {
-        parent::montar();
+    public function equipar() {
+        parent::equipar();
         echo "Adicionando som ao carro.\n";
     }
 }
@@ -46,25 +46,25 @@ class Alarme extends CarroDecorator {
     }
 
     /** @override */
-    public function montar() {
-        parent::montar();
+    public function equipar() {
+        parent::equipar();
         echo "Adicionando alarme ao carro.\n";
     }
 }
 
 /* Monta um carro com alarme e com som. */
 $carroCompleto = new Alarme( new Som( new CarroBase() ) );
-$carroCompleto->montar();
+$carroCompleto->equipar();
 
 /* Monta um carro sem acessórios. */
 $carroB = new CarroBase();
-$carroB->montar();
+$carroB->equipar();
 
 /* Monta uma carro com alarme. */
 $carroComAlarme = new Alarme($carroB);
-$carroComAlarme->montar();
+$carroComAlarme->equipar();
 
 /* Monta uma carro com som. */
 $carroComSom = new Som($carroB);
-$carroComSom->montar();
+$carroComSom->equipar();
 ?>
